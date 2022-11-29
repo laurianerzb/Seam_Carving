@@ -19,7 +19,7 @@ You need Python 3 to run this code and any IDE like Vs code, Atom,etc
 ## Usage
 
 The program is run in terminal   
->Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]
+>Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]    
 > Usage of numba @jit for faster processing
 Open [usage.tx](usage.tx) and follow the procedure
 
