@@ -21,7 +21,7 @@ You need Python 3 to run this code and any IDE like Vs code, Atom,etc
 The program is run in terminal   
 >Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]
 
-Open usage.tx and follow the procedure
+Open <usage.tx> and follow the procedure
 
 ## Process:
 
@@ -65,9 +65,13 @@ Seam insertion can be thought of as inversion of seam removal and insert new art
 
 The input image is on top and the result of the algorithm is on the bottom.
 - image resizing with dx and dy < 0 i.e we remove seam in both x and y axis
-<img src="images/ratatouille.jpg" height="342"> <img src="out_images/imge_resize_wxnyn.jpg" height="342">
+![original image](images/ratatouille.jpg height="342" "original image") <img src="out_images/imge_resize_wxnyn.jpg" height="342">
 
 - image removal object     
 <img src="images/tour_eiffel.jpg" height="300"> <img src="out_images/obj_remove.jpg" height="300">
 
 ## References
+
+**[Wikipedia seam carving](https://en.wikipedia.org/wiki/Seam_carving)**
+**[GeeksforGeeks](https://www.geeksforgeeks.org/image-resizing-using-seam-carving-using-opencv-in-python/?ref=gcse)**
+
