@@ -45,5 +45,5 @@ python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_re
 OBJECT REMOVAL
 
 python seamcarving.py -remove -im images/tour_eiffel.jpg -out out_images/obj_remove.jpg -remove_mask images/tour_eiffel_mask.jpg -visualize_seam
-python seamcarving.py -remove -im images/tour_eiffel_copy.gif -out out_images/obj_remove_demo.gif -remove_mask images/tour_eiffel_mask.jpg -visualize_seam
+python seamcarving.py -remove -im images/Picture1.png -out out_images/obj_remove.jpg -remove_mask images/Picture2.png -visualize_seam
 

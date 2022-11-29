@@ -80,7 +80,8 @@ def forward_energy(im):
         argmins = np.argmin(mULR, axis=0)
         m[i] = np.choose(argmins, mULR)
         energy[i] = np.choose(argmins, cULR)    
-        
+        visualize_seam = visualize_process(energy)
+        cv2.imwrite("forward_energy_demo.jpg", visualize_seam) 
     return energy
 
 @jit
