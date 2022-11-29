@@ -68,7 +68,7 @@ The input image is on top and the result of the algorithm is on the bottom.
 <img src="images/ratatouille.jpg" height="300"> <img src="out_images/imge_resize_wxnyn.jpg" height="300">
 
 - image removal object     
-<img src="images/tour_eiffel.jpg" height="300"> <img src="out_images/obj_remove.jpg" height="300">
+<img src="images/Picture1.png" height="300"> <img src="out_images/obj_remove.jpg" height="300">
 
 ## References
 
