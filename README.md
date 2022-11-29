@@ -67,4 +67,7 @@ The input image is on top and the result of the algorithm is on the bottom.
 - image resizing with dx and dy < 0 i.e we remove seam in both x and y axis
 <img src="images/ratatouille.jpg" height="342"> <img src="out_images/imge_resize_wxnyn.jpg" height="342">
 
+- image removal object
+<img src="images/tour_eiffel.jpg" height="300"> <img src="out_images/obj_remove.jpg" height="300">
+
 ## References

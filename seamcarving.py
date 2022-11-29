@@ -3,6 +3,8 @@ import cv2
 import argparse
 from numba import jit
 from scipy import ndimage as ndi
+from PIL import Image
+
 
 
 seam_color_val = np.array([0, 255, 0])    # seam visualization color (BGR)
@@ -44,8 +46,8 @@ def backward_energy(im):
     ygrad = ndi.convolve1d(im, np.array([1, 0, -1]), axis=0, mode='wrap')
     
     gradient_magnitude = np.sqrt(np.sum(xgrad**2, axis=2) + np.sum(ygrad**2, axis=2))
-
-    return gradient_magnitude
+    visualize_seam = visualize_process(gradient_magnitude)
+    
 
 @jit
 
@@ -79,7 +81,7 @@ def forward_energy(im):
         argmins = np.argmin(mULR, axis=0)
         m[i] = np.choose(argmins, mULR)
         energy[i] = np.choose(argmins, cULR)    
-        
+      
     return energy
 
 @jit
@@ -356,5 +358,6 @@ if __name__ == '__main__':
         print("Shape of original image ",im.shape)
         print("Shape of object removal image ",output.shape)
         cv2.imwrite(output_file_name, output)
+        
 
 
