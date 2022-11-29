@@ -18,10 +18,10 @@ You need Python 3 to run this code and any IDE like Vs code, Atom,etc
 
 ## Usage
 
-> The program is run in terminal   
-Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]
+The program is run in terminal   
+>Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]
 
-> Open usage.tx and follow the procedure
+Open usage.tx and follow the procedure
 
 ## Process:
 
@@ -65,6 +65,6 @@ Seam insertion can be thought of as inversion of seam removal and insert new art
 
 The input image is on the left and the result of the algorithm is on the right.
 - image resizing with dx and dy > 0 i.e we insert seam in both x and y axis
-<img src="" height="342"> <img src="" height="342">
+<img src="images/ratatouille.jpg" height="342"> <img src="" height="342">
 
 ## References
