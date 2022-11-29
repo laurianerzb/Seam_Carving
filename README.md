@@ -25,14 +25,14 @@ Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_fi
 
 ## Process:
 
-> IMAGE RESIZING
+> IMAGE RESIZING   
 For image resizing input mask is optonal
 - dx < 0 we perform seam removal
 - dx > 0 we perform seam insertion
 - dy < 0 we rotate image,we rotate mask if any, we perform seam removal,we reset the image to original position
 - dy > 0 we rotate image,we rotate mask if any, we perform seam insertion,we reset the image to original position
 
-> OBJECT REMOVAL
+> OBJECT REMOVAL   
 For object removal input mask is required
 
 ## Algorithm Overview
@@ -65,6 +65,6 @@ Seam insertion can be thought of as inversion of seam removal and insert new art
 
 The input image is on the left and the result of the algorithm is on the right.
 - image resizing with dx and dy > 0 i.e we insert seam in both x and y axis
-<img src="/Users/ruzuba/Documents/DOCUMENTS/SCHOOL/NKU/Programming/Videos-Course/Course1/CPP/Comp/images/ratatouille.jpg" height="342"> <img src="/Users/ruzuba/Documents/DOCUMENTS/SCHOOL/NKU/Programming/Videos-Course/Course1/CPP/Comp/out_images/imge_resize_woxpyp.jpg" height="342">
+<img src="" height="342"> <img src="" height="342">
 
 ## References
