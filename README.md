@@ -63,7 +63,7 @@ Seam insertion can be thought of as inversion of seam removal and insert new art
 
 ## Example Results
 
-The input image is on the left and the result of the algorithm is on the right.
+The input image is on top and the result of the algorithm is on the bottom.
 - image resizing with dx and dy < 0 i.e we remove seam in both x and y axis
 <img src="images/ratatouille.jpg" height="282"> <img src="out_images/imge_resize_wxnyn.jpg" height="282">
 

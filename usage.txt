@@ -15,7 +15,7 @@ y-axis: seam removal
 ---without mask
 python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_woxnyn.jpg -dy -20 -dx -100 -visualize_seam
 ---with mask
-python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_wxnyn.jpg -mask images/ratatouille_mask.jpg -dy -90 -dx -200 -visualize_seam
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_wxnyn.jpg -mask images/ratatouille_mask.jpg -dy -10 -dx -100 -visualize_seam
 
 example 2: dx < 0 and dy > 0
 x-axis: seam removal
