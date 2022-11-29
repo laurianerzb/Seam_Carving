@@ -1,0 +1,48 @@
+USAGE:
+python seam_carving.py (-resize | -remove) -im IM -out OUT [-mask MASK]
+                        [-remove_mask remove_mask] [-dy DY] [-dx DX] [-visualize_seam] [-hremove] [-backward_energy]
+
+IMAGE RESIZING
+
+-dx < 0 we perform seam removal
+-dx > 0 we perform seam insertion
+-dy < 0 we rotate image,we rotate mask if any, we perform seam removal,we reset the image to original position
+-dy > 0 we rotate image,we rotate mask if any, we perform seam insertion,we reset the image to original position
+
+example 1: dx < 0 and dy < 0 
+x-axis: seam removal
+y-axis: seam removal
+---without mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_woxnyn.jpg -dy -20 -dx -100 -visualize_seam
+---with mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_wxnyn.jpg -mask images/ratatouille_mask.jpg -dy -90 -dx -200 -visualize_seam
+
+example 2: dx < 0 and dy > 0
+x-axis: seam removal
+y-axis: seam insertion
+---without mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_woxnyp.jpg -dy 100 -dx -100 -visualize_seam
+---with mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_wxnyp.jpg -mask images/ratatouille_mask.jpg -dy 100 -dx -200 -visualize_seam
+
+example 3: dx > 0 and dy > 0
+x-axis: seam insertion
+y-axis: seam insertion
+---without mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_woxpyp.jpg -dy 80 -dx 90 -visualize_seam
+---with mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_wxpyp.jpg -mask images/ratatouille_mask.jpg -dy 80 -dx 90 -visualize_seam
+
+example 4: dx > 0 and dy < 0
+x-axis: seam insertion
+y-axis: seam removal
+---without mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_woxpyn.jpg -dy -20 -dx 100 -visualize_seam
+---with mask
+python seamcarving.py -resize -im images/ratatouille.jpg -out out_images/imge_resize_wxpyn.jpg -mask images/ratatouille_mask.jpg -dy -20 -dx 100 -visualize_seam
+
+
+OBJECT REMOVAL
+
+python seamcarving.py -remove -im images/tour_eiffel.jpg -out out_images/obj_remove.jpg -remove_mask images/tour_eiffel_mask.jpg -visualize_seam
+

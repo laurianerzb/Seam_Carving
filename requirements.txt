@@ -1,6 +1,0 @@
-scikit-image
-numpy
-numba
-imutils
-pillow
-scipy
