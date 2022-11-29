@@ -1,7 +1,7 @@
 
 # Content-aware image resizing
 
-Seam Carving, also known as Content Aware Image-Resizing, Image Retargeting, is a technique to resize the images. The technique basically resizes images based on the content of the image i.e. it preserves the content in order of its importance.In Seam-carving the image is reduced in size by one pixel of height (or width) at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. An horizintal seam in an image is a path of pixels connected from the left to the right with one pixel in each column.    
+Seam Carving, also known as Content Aware Image-Resizing, Image Retargeting, is a technique to resize the images. The technique basically resizes images based on the content of the image i.e. it preserves the content in order of its importance.In Seam-carving the image is reduced in size by one pixel of height (or width) at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. An horizontal seam in an image is a path of pixels connected from the left to the right with one pixel in each column.    
     
 The goal of this project is to implement seam carving of images and extends to object removal. We implemented this project based on the method described in the paper by Avidan and Shamir.
 
@@ -20,7 +20,7 @@ You need Python 3 to run this code and any IDE like Vs code, Atom,etc
 
 The program is run in terminal   
 >Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]
-
+> Usage of numba @jit for faster processing
 Open [usage.tx](usage.tx) and follow the procedure
 
 ## Process:
@@ -40,13 +40,13 @@ Open [usage.tx](usage.tx) and follow the procedure
 ### Seam Removal
 
 1. Calculate energy map:
-> Energy is calculated by sum the absolute value of the gradient in both x direction and y direction for all three channel (R, G, B).
+> backward energy is calculated by a simple gradient magnitude at energy map
 2. Build accumulated cost matrix using forward energy:
 > This step is implemented with dynamic programming. The value of each pixel is equal to its corresponding value in the energy map added to the minimum new neighbor energy introduced by removing one of its three top neighbors (top-left, top-center, and top-right)
 3. Find and remove minimum seam from top to bottom edge:
 > Backtracking from the bottom to the top edge of the accumulated cost matrix to find the minimum seam. All the pixels in each row after the pixel to be removed are shifted over one column to the left if it has index greater than the minimum seam.
 4. Repeat step 1 - 3 until achieving targeting width
-Seam Insertion
+
 
 ### Seam Insertion
 

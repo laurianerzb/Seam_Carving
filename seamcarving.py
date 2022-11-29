@@ -46,9 +46,8 @@ def backward_energy(im):
     ygrad = ndi.convolve1d(im, np.array([1, 0, -1]), axis=0, mode='wrap')
     
     gradient_magnitude = np.sqrt(np.sum(xgrad**2, axis=2) + np.sum(ygrad**2, axis=2))
-    visualize_seam = visualize_process(gradient_magnitude)
     
-
+    
 @jit
 
 #FORWARD ENERGY FUNCTIONS 
@@ -81,7 +80,7 @@ def forward_energy(im):
         argmins = np.argmin(mULR, axis=0)
         m[i] = np.choose(argmins, mULR)
         energy[i] = np.choose(argmins, cULR)    
-      
+        
     return energy
 
 @jit
@@ -250,12 +249,10 @@ def seam_carving(im, dy, dx, mask=None, visualize_seam=False):
 
     output = im
 
-    if dx < 0:
-        output, mask = seams_removal_main(output, -dx, mask, visualize_seam)
-
-    elif dx > 0:
+    if  dx > 0:
         output, mask = insert_seams(output, dx, mask, visualize_seam)
-
+    elif dx < 0:
+        output, mask = seams_removal_main(output, -dx, mask, visualize_seam)
     if dy < 0:
         output = rotate_image(output, True)
         if mask is not None:
