@@ -25,15 +25,15 @@ Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_fi
 
 ## Process:
 
-> IMAGE RESIZING   
-For image resizing input mask is optonal
-- dx < 0 we perform seam removal
-- dx > 0 we perform seam insertion
-- dy < 0 we rotate image,we rotate mask if any, we perform seam removal,we reset the image to original position
-- dy > 0 we rotate image,we rotate mask if any, we perform seam insertion,we reset the image to original position
+- IMAGE RESIZING   
+   > For image resizing input mask is optonal
+    - dx < 0 we perform seam removal
+    - dx > 0 we perform seam insertion
+    - dy < 0 we rotate image,we rotate mask if any, we perform seam removal,we reset the image to original position
+    - dy > 0 we rotate image,we rotate mask if any, we perform seam insertion,we reset the image to original position
 
-> OBJECT REMOVAL   
-For object removal input mask is required
+- OBJECT REMOVAL   
+    > For object removal input mask is required
 
 ## Algorithm Overview
 
