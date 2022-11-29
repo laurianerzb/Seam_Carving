@@ -1,9 +1,9 @@
 
 # Content-aware image resizing
 
-eam Carving, also known as Content Aware Image-Resizing, Image Retargeting, is a technique to "smart" resize the images. The technique basically resizes images based on the content of the image i.e. it preserves the content in order of its importance. The goal of this project is to implement seam carving and use it to retarget images.
+Seam Carving, also known as Content Aware Image-Resizing, Image Retargeting, is a technique to resize the images. The technique basically resizes images based on the content of the image i.e. it preserves the content in order of its importance.In Seam-carving the image is reduced in size by one pixel of height (or width) at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. An horizintal seam in an image is a path of pixels connected from the left to the right with one pixel in each column.    
     
-The goal of this project is to implement seam carving of images and extends to object removal. Seam carving is a method of resizing an image. We implemented this project based on the method described in the paper by Avidan and Shamir.
+The goal of this project is to implement seam carving of images and extends to object removal. We implemented this project based on the method described in the paper by Avidan and Shamir.
 
 ## Setup    
 
@@ -21,7 +21,7 @@ You need Python 3 to run this code and any IDE like Vs code, Atom,etc
 The program is run in terminal   
 >Syntax: python seam_carving.py (-resize | -remove) -im image_path -out output_file_name [-mask MASK] [-remove_mask_path remove_mask] [-dy DY] [-dx DX] [-visualize_seam]
 
-Open <usage.tx> and follow the procedure
+Open [usage.tx](usage.tx) and follow the procedure
 
 ## Process:
 
@@ -65,13 +65,14 @@ Seam insertion can be thought of as inversion of seam removal and insert new art
 
 The input image is on top and the result of the algorithm is on the bottom.
 - image resizing with dx and dy < 0 i.e we remove seam in both x and y axis
-![original image](images/ratatouille.jpg height="342" "original image") <img src="out_images/imge_resize_wxnyn.jpg" height="342">
+<img src="images/ratatouille.jpg" height="300"> <img src="out_images/imge_resize_wxnyn.jpg" height="300">
 
 - image removal object     
 <img src="images/tour_eiffel.jpg" height="300"> <img src="out_images/obj_remove.jpg" height="300">
 
 ## References
 
-**[Wikipedia seam carving](https://en.wikipedia.org/wiki/Seam_carving)**
-**[GeeksforGeeks](https://www.geeksforgeeks.org/image-resizing-using-seam-carving-using-opencv-in-python/?ref=gcse)**
+**[Wikipedia seam carving](https://en.wikipedia.org/wiki/Seam_carving)**    
+**[GeeksforGeeks](https://www.geeksforgeeks.org/image-resizing-using-seam-carving-using-opencv-in-python/?ref=gcse)**   
+**[Avidan and Shamir paper](http://graphics.cs.cmu.edu/courses/15-463/2007_fall/hw/proj2/imret.pdf)**
 
